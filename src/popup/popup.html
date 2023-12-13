@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Chrome V3 TS Starter</title>
+        <link href="../assets/icons/logo.ico" rel="icon" type="image/x-icon" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=KoHo:wght@200;400;600&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="../assets/shared.css" />
+        <link rel="stylesheet" href="./popup.css" />
+    </head>
+    <body>
+        <main id="main">
+            <div class="popup-main">
+                <div class="loader bounce">
+                    <img class="w-100 h-100" src="../assets/icons/logo.png" />
+                </div>
+                <header>
+                    <div class="product-icon">
+                        <img src="../assets/icons/logo.png" />
+                    </div>
+                    <span class="product-name regular-font">Odino</span>
+                    <div class="action-container">
+                        <div title="Pause Protection" class="tooltip pause"></div>
+                        <div title="Statistics" class="tooltip stats"></div>
+                        <div title="Settings" class="tooltip settings"></div>
+                    </div>
+                </header>
+                <div id="page-container"></div>
+                <div class="databreach-container" title="A data breach is a security incident that occurs when an unauthorized person gains access to confidential or sensitive information by exploiting security vulnerabilities" class="tooltip">
+                    <div class="databreach-container-image">
+                        <img class="check-icon"/>
+                    </div>
+                    <span class="small-font secondary-color" style="font-weight: 400;">No Data Breaches</span>
+                </div>
+                <div class="footer secondary-color">Odino is protecting you</div>
+            </div>
+        </div>
+        <script src="popup.js"></script>
+    </body>
+</html>

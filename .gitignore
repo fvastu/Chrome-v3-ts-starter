@@ -1,0 +1,8 @@
+node_modules
+dist
+dev
+temp
+.idea
+.github
+.vscode
+.env

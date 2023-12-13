@@ -1,0 +1,14 @@
+{
+    "appName": {
+        "message": "chrome-v3-ts-starter",
+        "description": "The name of the project"
+    },
+    "appDescription": {
+        "message": "Say goodbye to annoying ads and hello to secure browsing with Odino. Manifest V3 ready!",
+        "description": "The description of the extension."
+    },
+    "btnTooltip": {
+        "message": "Odino Security",
+        "description": "Tooltip for the button."
+    }
+}

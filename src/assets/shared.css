@@ -1,0 +1,96 @@
+:root {
+    --background-color: #f5f3ef;
+    --primary-color: #f67459;
+    --primary-color-light: #fb9258;
+    --secondary-color: #897469;
+    --button-height: 28px;
+    --animation-duration: 1.5s;
+    --card-icon-color: rgb(137, 116, 105, 0.5);
+    --card-dropdown-color: rgb(137, 116, 105, 0.85);
+    --card-text-color: rgb(137, 116, 105);
+}
+
+header a {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    color: var(--primary-color);
+}
+
+button {
+    color: white;
+    background: linear-gradient(180deg, var(--primary-color-light) 0%, var(--primary-color) 100%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+    border-color: transparent;
+    border-width: 0px;
+    font-weight: 600;
+    font-size: 120%;
+    cursor: pointer;
+}
+
+input {
+    color: white;
+    background: linear-gradient(180deg, var(--primary-color-light) 0%, var(--primary-color) 100%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+    border-color: transparent;
+    border-width: 0px;
+    font-weight: 600;
+    font-size: 100%;
+    padding-left: 15px;
+}
+
+input:focus::placeholder {
+    color: transparent;
+}
+
+input:focus:-ms-input-placeholder {
+    color: transparent;
+}
+
+input:focus::-ms-input-placeholder {
+    color: transparent;
+}
+
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    padding-left: 1rem;
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: white;
+    padding-left: 10px;
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: white;
+    padding-left: 10px;
+}
+
+.w-80 {
+    width: 80%;
+}
+
+.w-70 {
+    width: 70%;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.h-100 {
+    height: 100%;
+}
+
+.success {
+    background-color: rgba(14, 128, 14, 0.75);
+}
