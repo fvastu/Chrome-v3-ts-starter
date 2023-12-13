@@ -1,14 +1,9 @@
 {
     "name": "__MSG_appName__",
     "author": "Francesco Vasturzo",
-    "version": "1.0.3",
+    "version": "1.0.0",
     "manifest_version": 3,
     "description": "__MSG_appDescription__",
-    "icons": {
-        "16": "assets/icons/icon-16.png",
-        "64": "assets/icons/icon-64.png",
-        "128": "assets/icons/icon-128.png"
-    },
     "default_locale": "en",
     "content_scripts": [
         {
@@ -18,17 +13,6 @@
             ],
             "js": [
                 "content/content.js"
-            ],
-            "run_at": "document_start"
-        },
-        {
-            "matches": [
-                "http://*/*",
-                "https://*/*"
-            ],
-            "js": [
-                "password-enforcer/password-enforcer.js",
-                "copy-paste-unlocker/copy-paste-unlocker.js"
             ],
             "run_at": "document_start"
         }
@@ -41,43 +25,14 @@
         "scripting",
         "webNavigation",
         "alarms",
-        "webRequest",
-        "declarativeNetRequest",
-        "declarativeNetRequestFeedback"
+        "webRequest"
     ],
-    "declarative_net_request": {
-        "rule_resources": [
-            {
-                "id": "ads",
-                "enabled": true,
-                "path": "assets/dnr/ads-dnr.json"
-            },
-            {
-                "id": "dataTracking",
-                "enabled": true,
-                "path": "assets/dnr/data-tracking-dnr.json"
-            },
-            {
-                "id": "dataTrackingExtra",
-                "enabled": true,
-                "path": "assets/dnr/data-tracking-extra-dnr.json"
-            },
-            {
-                "id": "cryptominers",
-                "enabled": true,
-                "path": "assets/dnr/cryptominers-dnr.json"
-            }
-        ]
-    },
     "host_permissions": [
         "http://*/*",
         "https://*/*"
     ],
     "options_page": "settings/settings.html",
     "action": {
-        "default_icon": {
-            "16": "assets/icons/icon-16.png"
-        },
         "default_title": "fvastu",
         "default_popup": "popup/popup.html"
     },

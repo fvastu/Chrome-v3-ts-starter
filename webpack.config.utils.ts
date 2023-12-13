@@ -1,12 +1,12 @@
-import { ProgressPlugin, DefinePlugin } from 'webpack';
-import HtmlWebpackPlugin from 'html-webpack-plugin';
 import CopyWebpackPlugin from 'copy-webpack-plugin';
-import ZipPlugin from 'zip-webpack-plugin';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import { DefinePlugin, ProgressPlugin } from 'webpack';
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
+import ZipPlugin from 'zip-webpack-plugin';
 
-import path from 'path';
 import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 import ESLintPlugin from 'eslint-webpack-plugin';
+import path from 'path';
 import WebpackExtensionManifestPlugin from 'webpack-extension-manifest-plugin';
 
 const ExtReloader = require('webpack-ext-reloader-mv3');
@@ -68,12 +68,6 @@ export const getHTMLPlugins = (
         template: path.resolve(__dirname, `${sourceDir}/settings/settings.html`),
         chunks: ['settings'],
     }),
-    new HtmlWebpackPlugin({
-        title: 'Stats',
-        filename: path.resolve(__dirname, `${outputDir}/${browserDir}/stats/stats.html`),
-        template: path.resolve(__dirname, `${sourceDir}/stats/stats.html`),
-        chunks: ['stats'],
-    }),
 ];
 
 /**
@@ -112,11 +106,7 @@ export const getEntry = (sourceDir = Directories.SRC_DIR) => {
     return {
         popup: [path.resolve(__dirname, `${sourceDir}/popup/popup.ts`)],
         settings: [path.resolve(__dirname, `${sourceDir}/settings/settings.ts`)],
-        stats: [path.resolve(__dirname, `${sourceDir}/stats/stats.ts`)],
-        content: [path.resolve(__dirname, `${sourceDir}/content/cosmetics.ts`)],
-        ['password-enforcer']: path.resolve(__dirname, `${sourceDir}/content/password-enforcer.ts`),
-        ['copy-paste-unlocker']: path.resolve(__dirname, `${sourceDir}/content/copy-paste-unlocker.ts`),
-        // autoconsent: [path.resolve(__dirname, `${sourceDir}/content/autoconsent.ts`)],
+        content: [path.resolve(__dirname, `${sourceDir}/content/content-script.ts`)],
         background: [path.resolve(__dirname, `${sourceDir}/background/index.ts`)],
     };
 };
@@ -153,11 +143,6 @@ export const getCopyPlugins = (
                 {
                     from: path.resolve(__dirname, `${sourceDir}/popup/`),
                     to: path.resolve(__dirname, `${outputDir}/${browserDir}/popup`),
-                    filter: (resourcePath) => resourcePath.endsWith('.css'),
-                },
-                {
-                    from: path.resolve(__dirname, `${sourceDir}/stats/`),
-                    to: path.resolve(__dirname, `${outputDir}/${browserDir}/stats`),
                     filter: (resourcePath) => resourcePath.endsWith('.css'),
                 },
             ],
