@@ -1,21 +1,21 @@
 import TerserPlugin from 'terser-webpack-plugin';
 
 import {
+    Directories,
+    config,
+    getAnalyzerPlugins,
+    getCleanWebpackPlugins,
+    getCopyPlugins,
+    getDefinePlugins,
+    getEntry,
+    getEslintPlugins,
+    getExtensionManifestPlugins,
+    getExtensionReloaderPlugins,
     getHTMLPlugins,
     getOutput,
-    getCopyPlugins,
-    getZipPlugins,
-    getEntry,
-    getResolves,
-    getDefinePlugins,
-    getCleanWebpackPlugins,
-    config,
-    getExtensionManifestPlugins,
-    getEslintPlugins,
     getProgressPlugins,
-    getExtensionReloaderPlugins,
-    Directories,
-    getAnalyzerPlugins,
+    getResolves,
+    getZipPlugins,
 } from './webpack.config.utils';
 
 let generalConfig: any = {

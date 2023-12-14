@@ -1,6 +1,33 @@
-/* SHARED */
+/* Reset Styles */
 * {
     font-family: 'KoHo', sans-serif;
     padding: 0;
     margin: 0;
+}
+
+/* Popup Container Styles */
+.popup-container {
+    width: 300px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1e1e1e;
+}
+
+/* Popup Content Styles */
+.popup-content {
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #282828;
+    color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Popup Text Styles */
+.popup-text {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.5;
 }

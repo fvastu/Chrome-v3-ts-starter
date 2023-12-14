@@ -227,7 +227,6 @@ export const getResolves = () => {
             types: path.resolve(__dirname, './src/types/'),
             hooks: path.resolve(__dirname, './src/hooks/'),
             shared: path.resolve(__dirname, './src/shared'),
-            '@redux': path.resolve(__dirname, './src/@redux/'),
         },
         extensions: ['.js', '.jsx', '.ts', '.tsx'],
     };
@@ -285,7 +284,7 @@ export const getExtensionReloaderPlugins = () => {
             port: 9090,
             reloadPage: true,
             entries: {
-                contentScript: ['cosmetics'],
+                contentScript: ['content-script'],
                 background: 'background',
                 extensionPage: ['popup', 'options'],
             },

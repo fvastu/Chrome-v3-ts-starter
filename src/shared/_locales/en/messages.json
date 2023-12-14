@@ -4,7 +4,7 @@
         "description": "The name of the project"
     },
     "appDescription": {
-        "message": "Say goodbye to annoying ads and hello to secure browsing with Odino. Manifest V3 ready!",
+        "message": "Craft your Chrome Extension with Manifest V3 in just minutes",
         "description": "The description of the extension."
     }
 }

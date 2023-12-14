@@ -2,7 +2,7 @@ import { Runtime, runtime } from 'webextension-polyfill';
 
 class Background {
     startup = () => {
-        console.log('Startup!');
+        console.log('Background Page of this wonderful extension');
     };
 
     constructor() {

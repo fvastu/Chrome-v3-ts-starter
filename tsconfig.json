@@ -27,8 +27,6 @@
             "assets/*": ["./assets/*"],
             "components/*": ["./components/*"],
             "types/*": ["./types/*"],
-            "@redux/*": ["./@redux/*"],
-            "@hooks/*": ["./hooks/*"]
         },
         "typeRoots": ["node_modules/@types", "src/shared/types"]
     },
