@@ -46,7 +46,7 @@
    - Ensure you've set up any additional configurations or permissions required for your specific extension features.
 
 ## Manifest
-```json
+```
 {
   // Extension Information
   "name": "__MSG_appName__", // Placeholder for localized app name
